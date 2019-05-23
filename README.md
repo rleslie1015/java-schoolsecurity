@@ -4,7 +4,7 @@
 
 ## Instructions
 
-Start with your School School from Yesterday
+Start with your School from Yesterday
 
 * Connect to your Heroku PostgreSQL database in pgAdmin
 * Add full exception handling to your application
