@@ -106,6 +106,8 @@ public class StudentController
             @ApiResponse(code = 400, message = "Please send the correct body of data to update a student", response = void.class),
             @ApiResponse(code = 500, message = "Error updating student", response = ErrorDetail.class)
     } )
+
+
     @PutMapping(value = "/student/{studentid}")
     public ResponseEntity<?> updateStudent(
             @RequestBody

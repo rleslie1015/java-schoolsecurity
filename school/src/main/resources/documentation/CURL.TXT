@@ -1,0 +1,31 @@
+//for localhost:2027/ouath/token
+curl -X POST --user "lambda-client:lambda-secret" -d "grant_type=password&username=admin&password=password" http://localhost:2027/oauth/token
+
+//localhost:2027/courses/courses
+curl -X GET -H "Accept: application/json" -H "Authorization: Bearer 6c3d9c97-74d7-4e6e-8421-8c364d1ef022" http://localhost:2027/courses/courses
+
+//localhost:2027/courses/studcount
+curl -X GET -H "Accept: application/json" -H "Authorization: Bearer 6c3d9c97-74d7-4e6e-8421-8c364d1ef022" http://localhost:2027/courses/studcount
+
+//DELETE localhost:2027/courses/courseid
+ curl -X DELETE -H "Authorization: Bearer 6c3d9c97-74d7-4e6e-8421-8c364d1ef022" http://localhost:2027/courses/21
+
+ //localhost:2017/students/students
+ curl -X GET -H "Accept: application/json" -H "Authorization: Bearer 6c3d9c97-74d7-4e6e-8421-8c364d1ef022" https://lrod-school.herokuapp.com/students/students
+
+ //students/student/namelike/{name}
+ curl -X GET -H "Accept: application/json" -H "Authorization: Bearer 6c3d9c97-74d7-4e6e-8421-8c364d1ef022" https://lrod-school.herokuapp.com/students/student/namelike/ob
+
+ //students/student/{studentId}
+ curl -X GET -H "Accept: application/json" -H "Authorization: Bearer 6c3d9c97-74d7-4e6e-8421-8c364d1ef022" https://lrod-school.herokuapp.com/students/student/21
+
+//POST students/student
+//didnt work/unauthorized
+curl -X POST --user "lambda-client:lambda-secret" -d "grant_type=password&username=admin&password=password" http://localhost:2027/students/students
+
+
+//PUT //student/{studentid}
+curl -X PUT --user "lambda-client:lambda-secret" -d "grant_type=password&username=admin&password=password" http://localhost:2027/students/students
+
+//DELETE //student/{studentid}
+curl -X DELETE -H “Authorization: Bearer 10f2a235-1c86-439a-8a41-02d713c7f25f” https://lrod-school.herokuapp.com/students/student/1
